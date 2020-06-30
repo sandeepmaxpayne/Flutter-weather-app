@@ -9,6 +9,7 @@ class NetworkData {
     http.Response response = await http.get(url);
 
     if (response.statusCode == 200) {
+      print('fetch success');
       String data = response.body;
       return jsonDecode(data);
     } else {

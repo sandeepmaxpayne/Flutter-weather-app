@@ -14,12 +14,12 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    getLocation();
+    getPlaceLocation();
+    print('init state');
   }
 
-  void getLocation() async {
+  void getPlaceLocation() async {
     var weatherData = await WeatherModel().getLocationweather();
 
     Navigator.push(
@@ -29,6 +29,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                   locationWeather: weatherData,
                 )));
   }
+
 
   @override
   Widget build(BuildContext context) {
