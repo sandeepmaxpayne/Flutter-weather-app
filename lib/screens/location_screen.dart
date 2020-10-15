@@ -12,6 +12,7 @@ class LocationScreen extends StatefulWidget {
   _LocationScreenState createState() => _LocationScreenState();
 }
 
+///Location Screen
 class _LocationScreenState extends State<LocationScreen> {
   WeatherModel weather = WeatherModel();
   String weatherIcon;
@@ -29,7 +30,7 @@ class _LocationScreenState extends State<LocationScreen> {
       if (locationWeather == null) {
         temperature = 0;
         weatherIcon = "error";
-        weatherText = 'unable to get weather';
+        weatherText = 'No weather data available';
         cityName = '';
         return;
       }
